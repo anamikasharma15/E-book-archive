@@ -16,19 +16,52 @@
           font-family: "Poppins", sans-serif;
         }
       </style>
+
 </head>
-<body class="bg-gray">
+<body class="bg-gray mx-5">
     <section class="container my-2">
-    <h2 class="text-center text-success">Search Your Favorite Book Archive </h2>
+    <h1 class="text-center mt-3">Search Your Favorite<span class="text-success"> E-Book </span> Archive </h1>
+
     <!-- book search area start-->
-    <div class="input-group mb-3 w-50 mx-auto my-2 d-flex ">
+    <form class=" mx-auto py-5">
+        <div class="input-group mb-3 w-50 mx-auto py-5 d-flex ">
         <input id="search-field" type="text" class="form-control" placeholder="search your books here" aria-label="Recipient's username" aria-describedby="button-addon2">
         <button onclick="searchBook()" class="btn btn-success" type="button" id="button-search">Search</button>
       </div>
-      </section>
-      <!-- book search area end -->
 
+      <h1><span class="text-success text-center" id="search-result"></span></h1>
+    </form>
+      </section>
       
+
+      <!-- book list result -->
+    <section>
+        <div id="book-list" class="row row-cols-1 row-cols-md-3 g-4">
+        </div>
+    </section>
+
+      <!-- sppiner part  -->
+
+      <div style="visibility: hidden" id="sppiner" class="d-flex justify-content-center">
+        <div class="spinner-border text-danger" role="status">
+        <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <!-- display error message part -->
+
+    <section>
+        <div style="display:none" id="error-msg" class="text-center d-grid">
+            <h1 class="my-5 d-flex justify-content-center text-danger">Please search a correct book name  </h1>
+        </div>
+
+        <div style="display:none" id="emptyInput" class="text-center d-gri">
+            <h1 class="my-5 d-flex justify-content-center text-danger"> Please
+              give a book name </h1>
+        </div>
+    </section>
+
+
     
 
  <!-- js stylesheet -->
